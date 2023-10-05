@@ -18,7 +18,7 @@ const requestHandler = (req, res) => {
             res.write('<form action="/message" method="POST"><input type="text" name="message"><button type="submit">SEND</button></form>');
             res.write('</html>');
             return res.end();
-        });
+    });
     } else if (url === '/message' && method === 'POST') {
         const body = [];
         req.on('data', (chunk) => {
